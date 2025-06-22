@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "spend-ease",
+    "slug": "spend-ease",
+    "scheme": "acme",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "icon": "./public/images/icon.png",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./public/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.aayushbharti.spendease"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./public/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./public/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "58de0d5b-1863-4359-a1cf-059936fe619e"
+      }
+    },
+    "owner": "aayushbharti"
+  }
+}
