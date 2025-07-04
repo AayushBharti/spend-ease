@@ -1,0 +1,5 @@
+export const CURRENCY_CONFIG = {
+  API_URL: process.env.EXPO_PUBLIC_CURRENCY_API_URL,
+  API_KEY: process.env.EXPO_PUBLIC_CURRENCY_API_KEY,
+  currencies: process.env.EXPO_PUBLIC_CURRENCY_API_CURRENCIES,
+};
