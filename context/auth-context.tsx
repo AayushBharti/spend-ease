@@ -10,7 +10,7 @@ import {
   updatePassword as firebaseUpdatePassword,
 } from "firebase/auth";
 import { auth, firestore } from "@/config/firebase";
-import { doc, getDoc, setDoc } from "@firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { useRouter } from "expo-router";
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -91,7 +91,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       const response = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       await setDoc(doc(firestore, "users", response?.user?.uid), {
         name,
@@ -149,7 +149,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const updatePassword = async (
     oldPassword: string,
-    newPassword: string
+    newPassword: string,
   ): Promise<{ success: boolean; msg?: string }> => {
     try {
       const user = auth.currentUser;
